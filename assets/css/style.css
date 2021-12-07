@@ -1,0 +1,10 @@
+/* Global style */
+
+body {
+    background-color: white;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    color: whitesmoke;
+    background-image: url(../images/earth-background.png);
+    background-position: -200px 20px;
+}
