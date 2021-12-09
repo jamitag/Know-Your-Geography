@@ -8,3 +8,13 @@ body {
     background-image: url(../images/earth-background.png);
     background-position: -200px 20px;
 }
+
+#primary-box {
+    background: rgba(25, 113, 181, 0.5);
+    width: 400px;
+    height: 600px;
+}
+
+#play-button {
+    color: rgba(25, 113, 181, 0.5);
+}
