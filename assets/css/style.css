@@ -13,8 +13,37 @@ body {
     background: rgba(25, 113, 181, 0.5);
     width: 400px;
     height: 600px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#question {
+    height: 300px;
+    width: 100%;
+}
+
+#answers {
+    height: 150px;
+    width: 100%;
+}
+
+.answer-button {
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.answer-button:hover {
+    color: white;
+    background-color: rgba(16, 63, 131, 0.93);
 }
 
 #play-button {
     color: rgba(25, 113, 181, 0.5);
+    font-size: 400%;
+    border-radius: 50%;
+}
+
+#play-button:hover {
+    background-color: rgba(16, 63, 131, 0.93);
 }
