@@ -18,8 +18,10 @@ body {
 }
 
 #question {
-    height: 300px;
+    height: 250px;
     width: 100%;
+    font-size: 150%;
+    padding-top: 40px;
 }
 
 #answers {
@@ -27,13 +29,13 @@ body {
     width: 100%;
 }
 
-.answer-button {
+.buttons {
     width: 180px;
     height: 50px;
     border-radius: 10px;
 }
 
-.answer-button:hover {
+.buttons:hover {
     color: white;
     background-color: rgba(16, 63, 131, 0.93);
 }
@@ -47,4 +49,18 @@ body {
 
 #play-button:hover {
     background-color: rgba(16, 63, 131, 0.93);
+}
+
+#next-button {
+    width: 360px;
+    height: 100px;
+    background-color: rgba(16, 63, 131, 0.93);
+    color: white;
+    border-radius: 10px;
+    font-size: 200%;
+}
+
+#next-button:hover {
+    border: black;
+    color: yellow;
 }

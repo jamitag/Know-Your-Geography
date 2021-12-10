@@ -63,9 +63,9 @@ let tenthQuestion  = {
 function showQuestion(q) {
     let selectQuestion = document.getElementById('question');
     selectQuestion.textContent = q.question;
-    let answers = document.querySelectorAll('.answer-button');
+    let answers = document.querySelectorAll('buttons');
     answers.forEach(function(element, index){
-        element.textContent = q.answer-button[index]
+        element.textContent = q.buttons[index]
     })
 }
 
