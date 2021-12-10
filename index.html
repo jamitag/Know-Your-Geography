@@ -15,12 +15,19 @@
     <h1>
         <h1 class= "header">Know Your... Geography</h1>
     </h1>
-    <div id="primary-box">
+    <div id="play-box">
+                <button id="play-button" onclick="startQuiz()"><i class="fas fa-play-circle"></i></button>
+    </div>
+    <div id="primary-box" style="display:none">
         <div id="question-box"></div>
-            <div>
-                <a href="game.html">
-                    <button id="play-button"><i class="fas fa-play-circle"></i></button>
+            <div id="question">Question</div>
+            <div id="answers">
+                <button class="buttons" id="button-one">1</button>
+                <button class="buttons" id="button-two">2</button>
+                <button class="buttons" id="button-three">3</button>
+                <button class="buttons" id="button-four">4</button>
             </div>
+            <button id="next-button">Next</button>
     </div>
 
 <!-- font awesome script -->
