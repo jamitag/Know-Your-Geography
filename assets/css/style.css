@@ -42,7 +42,7 @@ body {
     border-radius: 10px;
 }
 
-.buttons:hover {
+.buttons:hover, .buttons.active {
     color: white;
     background-color: rgba(16, 63, 131, 0.93);
 }
@@ -70,4 +70,9 @@ body {
 #next-button:hover {
     border: black;
     color: yellow;
+}
+
+#score_container {
+    margin: 50px;
+    font-size: 200%;
 }
