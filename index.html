@@ -13,9 +13,19 @@
 </head>
 <body>
     <h1 class= "header">Know Your... Geography</h1>
-    <div id="play-box">
+    <div id="play-box" class="box">
+            <div>
                 <button id="play-button" onclick="startQuiz()"><i class="fas fa-play-circle"></i></button>
+            </div>
+            <div>
+                <button id="how-to-play-button" onclick="showInstructions()">How to play</button>
+                <p id="how-to-play" style="display:none">how to play - Welcome to Know Your Geography; a fun quiz game that will test your knowledge of geography. 
+    Simply press the play button to get started. Each question presents four options for you to choose. 
+    Select carfeully and be sure to get at least 8 correct answers to pass. 
+    Goodluck!</p>
+            </div>
     </div>
+    
     <div id="primary-box" style="display:none">
         <div id="question-box"></div>
             <div id="question">Question</div>
@@ -31,6 +41,14 @@
                     /
                 <span id="total"></span>
             </div>
+    </div>
+    <div id="result-box" style="display:none" class="box">
+        <div id="congratulations" style="display:none">
+            <p>congrats</p>
+        </div>
+        <div id="try-again" style="display:none">
+            <p>boo</p>
+        </div>
     </div>
 
 <!-- font awesome script -->

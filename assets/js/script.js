@@ -55,6 +55,8 @@ let questionsArray = [
 
 let i = 0;
 let score = 0;
+let primaryBox = document.getElementById("primary-box");
+let playBox = document.getElementById("play-box");
 let total = questionsArray.length;
 let answer = "";
 let buttons=document.querySelectorAll('[id^="button-"]')
@@ -62,28 +64,28 @@ let scoreText = document.getElementById("score")
 scoreText.textContent=score;
 let totalText = document.getElementById("total");
 totalText.textContent=total;
+let resultBox = document.getElementById("result-box");
+let congratulations = document.getElementById("congratulations");
+let tryAgain = document.getElementById("try-again");
 
 
 //this function will allow clicking of the play button to take the user to the first question
 function startQuiz() {
-    let primaryBox = document.getElementById("primary-box");
-    primaryBox.style.display = "inline";
-    let playBox = document.getElementById("play-box");
+    primaryBox.style.display = "";
     playBox.style.display = "none";
     nextQuestion();
 }
 
-//clicking the 'next' button will move onto the next question
+//clicking the 'next' button will move onto the next question and ensures the next questin is not pre selected
 function nextQuestion() {
-    let selectQuestion = document.getElementById('question');
-    selectQuestion.textContent = questionsArray[i].question;
+        let selectQuestion = document.getElementById('question');
+        selectQuestion.textContent = questionsArray[i].question;
 
-    for (let x=0; x < buttons.length; x++) {
-        buttons[x].textContent = questionsArray[i].answer[x]
-        buttons[x].classList.remove("active")
-    }
-    answer = "";
-    i++;
+        for (let x=0; x < buttons.length; x++) {
+            buttons[x].textContent = questionsArray[i].answer[x]
+            buttons[x].classList.remove("active")
+            }
+        answer = ""; //ensures next question is blank
 }
 
 //assign the chosen value for user to submit
@@ -100,14 +102,22 @@ function changeAnswer(inputButton, input){
 
 //identifying correct answer and adding to score then moving on to next question
 function answerQuestion() {
+    console.log(i);
+    if (i === (questionsArray.length - 1)){
+        finishQuiz();
+        return;
+    }
     if(answer === ""){
         return
     }
     if (answer === questionsArray[i].correctAnswer){
         score++
+        scoreText.textContent=score;
     }
+    i++;
     nextQuestion()
 }
+
 
 
 

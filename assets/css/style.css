@@ -9,7 +9,7 @@ body {
     background-position: -200px 20px;
 }
 
-#play-box {
+.box {
     background: rgba(25, 113, 181, 0.5);
     width: 400px;
     height: 600px;
@@ -52,10 +52,22 @@ body {
     font-size: 800%;
     border-radius: 50%;
     margin-top: 200px;
+    display: inline-block;
 }
 
 #play-button:hover {
     background-color: rgba(16, 63, 131, 0.93);
+    color: white;
+}
+
+#how-to-play-button {
+    margin-top: 100px;
+    border-radius: 10px;
+}
+
+#how-to-play-button:hover {
+    background-color: rgba(16, 63, 131, 0.93);
+    color: white;
 }
 
 #next-button {
