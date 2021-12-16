@@ -41,7 +41,6 @@ User is notified of their overall score at end of game informing the user if the
 ### Editor
 - GitPod
 
-
 ### Languages
 - HTML5
 - CSS3
@@ -56,7 +55,6 @@ User is notified of their overall score at end of game informing the user if the
 - Font Awesome
 - Google Fonts
 - Stock Images
-
 
 ## Testing
 
