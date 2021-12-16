@@ -59,11 +59,11 @@ let primaryBox = document.getElementById("primary-box");
 let playBox = document.getElementById("play-box");
 let total = questionsArray.length;
 let answer = "";
-let buttons=document.querySelectorAll('[id^="button-"]')
+let buttons = document.querySelectorAll('[id^="button-"]')
 let scoreText = document.getElementById("score")
 scoreText.textContent=score;
 let totalText = document.getElementById("total");
-totalText.textContent=total;
+totalText.textContent = total;
 let resultBox = document.getElementById("result-box");
 let congratulations = document.getElementById("congratulations");
 let tryAgain = document.getElementById("try-again");
@@ -76,19 +76,19 @@ function startQuiz() {
     nextQuestion();
 }
 
-//clicking the 'next' button will move onto the next question and ensures the next questin is not pre selected
+//displays each question by iterating through the questionArray and shows corresponding answer options
 function nextQuestion() {
+    //populates question
         let selectQuestion = document.getElementById('question');
         selectQuestion.textContent = questionsArray[i].question;
-
+    //populates answers
         for (let x=0; x < buttons.length; x++) {
             buttons[x].textContent = questionsArray[i].answer[x]
             buttons[x].classList.remove("active")
             }
-        answer = ""; //ensures next question is blank
 }
 
-//assign the chosen value for user to submit
+//clicking an answer button calls this function. It allows user to select one of the four answer options and remain active
 function changeAnswer(inputButton, input){
     answer = input
 
@@ -100,7 +100,7 @@ function changeAnswer(inputButton, input){
     inputButton.classList.add("active")
 }
 
-//identifying correct answer and adding to score then moving on to next question
+//prevents user from proceeding without selecting a choice. Identifies last question and calls relavant function  and also adds correct answer to score counter
 function answerQuestion() {
     console.log(i);
     if (i === (questionsArray.length - 1)){
