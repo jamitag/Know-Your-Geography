@@ -53,72 +53,83 @@ let questionsArray = [
 
 // global variables
 
-let i = 0;
+let questionIndex = 0;
 let score = 0;
-let primaryBox = document.getElementById("primary-box");
-let playBox = document.getElementById("play-box");
+const PRIMARY_BOX = document.getElementById("primary-box");
+const PLAY_BOX = document.getElementById("play-box");
 let total = questionsArray.length;
 let answer = "";
-let buttons = document.querySelectorAll('[id^="button-"]')
-let scoreText = document.getElementById("score")
-scoreText.textContent=score;
-let totalText = document.getElementById("total");
-totalText.textContent = total;
-let resultBox = document.getElementById("result-box");
-let congratulations = document.getElementById("congratulations");
-let tryAgain = document.getElementById("try-again");
+const BUTTONS = document.querySelectorAll('[id^="button-"]')
+const SCORE_TEXT = document.getElementById("score")
+SCORE_TEXT.textContent=score;
+const TOTAL_TEXT = document.getElementById("total");
+TOTAL_TEXT.textContent = total;
+const RESULT_BOX = document.getElementById("result-box");
+const CONGRATULATIONS = document.getElementById("congratulations");
+const TRY_AGAIN = document.getElementById("try-again");
 
-
-//this function will allow clicking of the play button to take the user to the first question
+/*
+this function will allow clicking 
+of the play button to take the user 
+to the first question
+*/
 function startQuiz() {
-    primaryBox.style.display = "";
-    playBox.style.display = "none";
+    PRIMARY_BOX.style.display = "";
+    PLAY_BOX.style.display = "none";
     nextQuestion();
 }
 
-//displays each question by iterating through the questionArray and shows corresponding answer options
+/*
+renders each question within the 
+questionArray and displays corresponding 
+answer options
+*/
 function nextQuestion() {
     //populates question
         let selectQuestion = document.getElementById('question');
-        selectQuestion.textContent = questionsArray[i].question;
+        selectQuestion.textContent = questionsArray[questionIndex].question;
     //populates answers
-        for (let x=0; x < buttons.length; x++) {
-            buttons[x].textContent = questionsArray[i].answer[x]
-            buttons[x].classList.remove("active")
+        for (let x=0; x < BUTTONS.length; x++) {
+            BUTTONS[x].textContent = questionsArray[questionIndex].answer[x]
+            BUTTONS[x].classList.remove("active")
             }
 }
 
-//clicking an answer button calls this function. It allows user to select one of the four answer options and remain active
-function changeAnswer(inputButton, input){
+/*
+clicking an answer button calls this function. 
+It allows user to select one of the four answer 
+options and remain active
+*/
+function renderOrchangeAnswer(inputButton, input){
     answer = input
 
-    for(var x=0; x < buttons.length; x++){
-        if(buttons[x].classList.contains("active")){
-            buttons[x].classList.remove("active")
+    for(var x=0; x < BUTTONS.length; x++){
+        if(BUTTONS[x].classList.contains("active")){
+            BUTTONS[x].classList.remove("active")
         }
     }
     inputButton.classList.add("active")
 }
 
-//prevents user from proceeding without selecting a choice. Identifies last question and calls relavant function  and also adds correct answer to score counter
+/*
+prevents user from proceeding without selecting 
+a choice. Identifies last question and calls 
+relavant function  and also adds correct answer 
+to score counter
+*/
 function answerQuestion() {
-    console.log(i);
-    if (i === (questionsArray.length - 1)){
+    console.log(questionIndex);
+    if (questionIndex === (questionsArray.length - 1)){
         finishQuiz();
         return;
     }
     if(answer === ""){
         return
     }
-    if (answer === questionsArray[i].correctAnswer){
+    if (answer === questionsArray[questionIndex].correctAnswer){
         score++
-        scoreText.textContent=score;
+        SCORE_TEXT.textContent=score;
     }
-    i++;
+    questionIndex++;
     nextQuestion()
 }
-
-
-
-
-
