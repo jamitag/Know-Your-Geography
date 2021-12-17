@@ -60,6 +60,12 @@ body {
     color: white;
 }
 
+#how-to-play {
+    font-size: 150%;
+    line-height: 40px;
+    margin: 20px;
+}
+
 #how-to-play-button {
     margin-top: 100px;
     border-radius: 10px;
@@ -86,5 +92,13 @@ body {
 
 #score_container {
     margin: 50px;
+    font-size: 200%;
+}
+
+.face {
+    font-size: 600%;
+}
+
+.result-text {
     font-size: 200%;
 }

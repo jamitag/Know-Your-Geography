@@ -60,6 +60,7 @@ const PLAY_BOX = document.getElementById("play-box");
 let total = questionsArray.length;
 let answer = "";
 const BUTTONS = document.querySelectorAll('[id^="button-"]')
+const NEXT_BUTTON = document.getElementById("next-button")
 const SCORE_TEXT = document.getElementById("score")
 SCORE_TEXT.textContent=score;
 const TOTAL_TEXT = document.getElementById("total");
@@ -70,6 +71,12 @@ const TRY_AGAIN = document.getElementById("try-again");
 let instructions = document.getElementById("how-to-play");
 let instructionsVisable = false;
 
+
+/*
+this function will display instructions
+on how to play the game when clicking 
+the 'How to play' button
+*/
 function showInstructions() {
     if(!instructionsVisable){
         instructions.style.display="";
@@ -79,6 +86,7 @@ function showInstructions() {
         instructions.style.display="none";
         instructionsVisable.style.display = false;
     }
+    PRIMARY_BOX.style.display = "";
 }
 
 /*
@@ -99,13 +107,13 @@ answer options
 */
 function nextQuestion() {
     //populates question
-        let selectQuestion = document.getElementById('question');
-        selectQuestion.textContent = questionsArray[questionIndex].question;
+    let selectQuestion = document.getElementById('question');
+    selectQuestion.textContent = questionsArray[questionIndex].question;
     //populates answers
-        for (let x=0; x < BUTTONS.length; x++) {
-            BUTTONS[x].textContent = questionsArray[questionIndex].answer[x]
-            BUTTONS[x].classList.remove("active")
-            }
+    for (let x=0; x < BUTTONS.length; x++) {
+        BUTTONS[x].textContent = questionsArray[questionIndex].answer[x]
+        BUTTONS[x].classList.remove("active")
+        }
 }
 
 /*
@@ -137,6 +145,7 @@ function answerQuestion() {
         return;
     }
     if(answer === ""){
+        // NEXT_BUTTON.style.pointerEvents="none";
         return
     }
     if (answer === questionsArray[questionIndex].correctAnswer){
@@ -145,4 +154,16 @@ function answerQuestion() {
     }
     questionIndex++;
     nextQuestion()
+}
+
+function finishQuiz() {
+    PRIMARY_BOX.style.display="none";
+    RESULT_BOX.style.display = "";
+
+    if (score >= (questionsArray.length * 0.7)){
+        CONGRATULATIONS.style.display = "";
+    }
+    else {
+        TRY_AGAIN.style.display = "";
+    }
 }
