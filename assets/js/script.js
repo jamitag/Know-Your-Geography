@@ -67,6 +67,19 @@ TOTAL_TEXT.textContent = total;
 const RESULT_BOX = document.getElementById("result-box");
 const CONGRATULATIONS = document.getElementById("congratulations");
 const TRY_AGAIN = document.getElementById("try-again");
+let instructions = document.getElementById("how-to-play");
+let instructionsVisable = false;
+
+function showInstructions() {
+    if(!instructionsVisable){
+        instructions.style.display="";
+        instructionsVisable = true;
+    }
+    else {
+        instructions.style.display="none";
+        instructionsVisable.style.display = false;
+    }
+}
 
 /*
 this function will allow clicking 
