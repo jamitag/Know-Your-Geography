@@ -57,6 +57,7 @@ let questionIndex = 0;
 let score = 0;
 const PRIMARY_BOX = document.getElementById("primary-box");
 const PLAY_BOX = document.getElementById("play-box");
+const PLAY_BUTTON = document.getElementById("play-button");
 let total = questionsArray.length;
 let answer = "";
 const BUTTONS = document.querySelectorAll('[id^="button-"]')
@@ -81,14 +82,15 @@ the 'How to play' button
 */
 function showInstructions() {
     if(!instructionsVisable){
+        PLAY_BUTTON.style.display= "none";
         instructions.style.display="";
         instructionsVisable = true;
     }
     else {
+        PLAY_BUTTON.style.display= "";
         instructions.style.display="none";
-        instructionsVisable.style.display = false;
+        instructionsVisable = false;
     }
-    PRIMARY_BOX.style.display = "";
 }
 
 /*
