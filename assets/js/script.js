@@ -70,6 +70,8 @@ const CONGRATULATIONS = document.getElementById("congratulations");
 const TRY_AGAIN = document.getElementById("try-again");
 let instructions = document.getElementById("how-to-play");
 let instructionsVisable = false;
+const RESULTS_SCORE = document.getElementsByClassName("result-score");
+
 
 
 /*
@@ -114,6 +116,7 @@ function nextQuestion() {
         BUTTONS[x].textContent = questionsArray[questionIndex].answer[x]
         BUTTONS[x].classList.remove("active")
         }
+        NEXT_BUTTON.disabled = true;
 }
 
 /*
@@ -129,6 +132,7 @@ function renderOrchangeAnswer(inputButton, input){
             BUTTONS[x].classList.remove("active")
         }
     }
+    NEXT_BUTTON.disabled = false;
     inputButton.classList.add("active")
 }
 
@@ -156,7 +160,14 @@ function answerQuestion() {
     nextQuestion()
 }
 
+
+/*
+pull through score, displaying  on results page. Highlight relavant page depending on score
+*/
 function finishQuiz() {
+    for (var i = 0; i < RESULTS_SCORE.length; i++) {
+        RESULTS_SCORE[i].textContent = `${score} / ${total}`
+    }
     PRIMARY_BOX.style.display="none";
     RESULT_BOX.style.display = "";
 
