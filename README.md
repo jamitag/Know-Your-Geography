@@ -89,7 +89,7 @@ The game was deployed with GitHub using the below steps:
 - Navigate to the 'Pages' section displayed on the left menu.
 - Select the main branch from the drop-down menu and save to display the link to your website.
 
-Know Your... Geography can be viewed [here]("")
+Know Your... Geography can be viewed [here]("https://jamitag.github.io/Know-Your-Geography/")
 
 ## Credits
 

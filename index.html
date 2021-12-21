@@ -24,9 +24,6 @@
             <div>
                 <button id="how-to-play-button" onclick="showInstructions()">How to play</button>
             </div>
-            <div>
-                <button id="restart-button" onclick=""><i class="fas fa-step-backward"></i></button>
-            </div>
     </div>
     <div id="primary-box" style="display:none">
         <div id="question-box"></div>
@@ -49,11 +46,13 @@
             <p class="face"><i class="far fa-smile"></i></p>
             <p class="result-text">You scored <span class="result-score">""</span></p>
             <p class="result-text">Well done. You really know your Geography!</p>
+            <button class="restart-button" onclick=""><i class="fas fa-step-backward"></i></button>
         </div>
         <div id="try-again" style="display:none">
             <p class="face"><i class="far fa-frown"></i></p>
              <p class="result-text">You scored <span class="result-score">""</span></p>
              <p class="result-text">Better luck next time</p>
+             <button class="restart-button" onclick=""><i class="fas fa-step-backward"></i></button>
         </div>
     </div>
 
