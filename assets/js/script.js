@@ -49,7 +49,7 @@ let questionsArray = [
         answer: ['Ganges', 'Narmada', 'Yamuna' , 'Indus'],
         correctAnswer: "Ganges"
     }
-]
+];
 
 // global variables
 
@@ -60,9 +60,9 @@ const PLAY_BOX = document.getElementById("play-box");
 const PLAY_BUTTON = document.getElementById("play-button");
 let total = questionsArray.length;
 let answer = "";
-const BUTTONS = document.querySelectorAll('[id^="button-"]')
-const NEXT_BUTTON = document.getElementById("next-button")
-const SCORE_TEXT = document.getElementById("score")
+const BUTTONS = document.querySelectorAll('[id^="button-"]');
+const NEXT_BUTTON = document.getElementById("next-button");
+const SCORE_TEXT = document.getElementById("score");
 SCORE_TEXT.textContent=score;
 const TOTAL_TEXT = document.getElementById("total");
 TOTAL_TEXT.textContent = total;
@@ -115,8 +115,8 @@ function nextQuestion() {
     selectQuestion.textContent = questionsArray[questionIndex].question;
     //populates answers
     for (let x=0; x < BUTTONS.length; x++) {
-        BUTTONS[x].textContent = questionsArray[questionIndex].answer[x]
-        BUTTONS[x].classList.remove("active")
+        BUTTONS[x].textContent = questionsArray[questionIndex].answer[x];
+        BUTTONS[x].classList.remove("active");
         }
         NEXT_BUTTON.disabled = true;
 }
@@ -127,48 +127,41 @@ It allows user to select one of the four answer
 options and remain active
 */
 function renderOrchangeAnswer(inputButton, input){
-    answer = input
+    answer = input;
 
     for(var x=0; x < BUTTONS.length; x++){
         if(BUTTONS[x].classList.contains("active")){
-            BUTTONS[x].classList.remove("active")
+            BUTTONS[x].classList.remove("active");
         }
     }
     NEXT_BUTTON.disabled = false;
-    inputButton.classList.add("active")
+    inputButton.classList.add("active");
 }
 
 /*
-prevents user from proceeding without selecting 
-a choice. Identifies last question and calls 
-relavant function  and also adds correct answer 
-to score counter
+Adds correct answer to score counter and identifies last 
+question and finishes quiz
 */
 function answerQuestion() {
-    console.log(questionIndex);
     if (questionIndex === (questionsArray.length - 1)){
         finishQuiz();
         return;
     }
-    if(answer === ""){
-        // NEXT_BUTTON.style.pointerEvents="none";
-        return
-    }
     if (answer === questionsArray[questionIndex].correctAnswer){
-        score++
+        score++;
         SCORE_TEXT.textContent=score;
     }
     questionIndex++;
-    nextQuestion()
+    nextQuestion();
 }
 
-
 /*
-pull through score, displaying  on results page. Highlight relavant page depending on score
+Displays 'congratulations' or 'try again' page depending on score
+as well as showing the users score
 */
 function finishQuiz() {
     for (var i = 0; i < RESULTS_SCORE.length; i++) {
-        RESULTS_SCORE[i].textContent = `${score} / ${total}`
+        RESULTS_SCORE[i].textContent = `${score} / ${total}`;
     }
     PRIMARY_BOX.style.display="none";
     RESULT_BOX.style.display = "";
