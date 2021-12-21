@@ -72,6 +72,7 @@ const TRY_AGAIN = document.getElementById("try-again");
 let instructions = document.getElementById("how-to-play");
 let instructionsVisable = false;
 const RESULTS_SCORE = document.getElementsByClassName("result-score");
+const RESTART_GAME = document.getElementsByClassName("restart-button");
 
 
 
@@ -172,4 +173,10 @@ function finishQuiz() {
     else {
         TRY_AGAIN.style.display = "";
     }
+}
+
+function restartQuiz() {
+    RESTART_GAME.style.display = "";
+    startQuiz();
+
 }
