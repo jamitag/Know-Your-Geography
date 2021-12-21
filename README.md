@@ -95,7 +95,7 @@ Know Your... Geography can be viewed [here]("https://jamitag.github.io/Know-Your
 
 ### Content
 
-- 
+- I used this [method]("https://stackoverflow.com/questions/3715047/how-to-reload-a-page-using-javascript") to refresh the page at the end of the quiz.
 
 ### Media
 

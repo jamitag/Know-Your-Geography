@@ -175,6 +175,8 @@ function finishQuiz() {
     }
 }
 
+
+// Button which restarts quiz at end of game
 function restartQuiz() {
     window.location.reload();
 }
