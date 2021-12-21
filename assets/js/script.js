@@ -144,13 +144,13 @@ Adds correct answer to score counter and identifies last
 question and finishes quiz
 */
 function answerQuestion() {
-    if (questionIndex === (questionsArray.length - 1)){
-        finishQuiz();
-        return;
-    }
     if (answer === questionsArray[questionIndex].correctAnswer){
         score++;
         SCORE_TEXT.textContent=score;
+    }
+    if (questionIndex === (questionsArray.length - 1)){
+        finishQuiz();
+        return;
     }
     questionIndex++;
     nextQuestion();
@@ -176,7 +176,5 @@ function finishQuiz() {
 }
 
 function restartQuiz() {
-    RESTART_GAME.style.display = "";
-    startQuiz();
-
+    window.location.reload();
 }
