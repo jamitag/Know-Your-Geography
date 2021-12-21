@@ -12,7 +12,9 @@
     <title>Know Your Geography</title>
 </head>
 <body>
+    <!-- Header-->
     <h1 class= "header">Know Your... Geography</h1>
+    <!-- Main page with option to begin game or read instructions -->
     <div id="play-box" class="box">
             <div>
                 <button id="play-button" onclick="startQuiz()"><i class="fas fa-play-circle"></i></button>
@@ -25,6 +27,7 @@
                 <button id="how-to-play-button" onclick="showInstructions()">How to play</button>
             </div>
     </div>
+    <!-- Main game area hosting the question, answers and next button -->
     <div id="primary-box" style="display:none">
         <div id="question-box"></div>
             <div id="question">Question</div>
@@ -35,12 +38,14 @@
                 <button class="buttons" id="button-four" onclick="renderOrchangeAnswer(this, this.innerText)">4</button>
             </div>
             <button id="next-button" onclick="answerQuestion()">Next</button>
+            <!-- Score counter -->
             <div id="score_container">
                 <span id="score"></span>
                     /
                 <span id="total"></span>
             </div>
     </div>
+    <!-- Two possible displays presented to the user depending on their score -->
     <div id="result-box" style="display:none" class="box">
         <div id="congratulations" style="display:none">
             <p class="face"><i class="far fa-smile"></i></p>
