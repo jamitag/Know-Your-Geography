@@ -69,7 +69,7 @@ body {
 /* Instructions */
 
 #how-to-play {
-    font-size: 150%;
+    font-size: 1rem;
     line-height: 40px;
     margin: 20px;
 }
@@ -83,6 +83,8 @@ body {
     background-color: rgba(16, 63, 131, 0.93);
     color: white;
 }
+
+/* Next button for progressing through game */
 
 #next-button {
     width: 360px;
@@ -98,10 +100,14 @@ body {
     color: yellow;
 }
 
+/* Display showing live score */
+
 #score_container {
     margin: 50px;
     font-size: 200%;
 }
+
+/* Result pages */
 
 .face {
     font-size: 600%;
@@ -109,4 +115,13 @@ body {
 
 .result-text {
     font-size: 200%;
+}
+
+.restart-button {
+    border-radius: 10px;
+}
+
+.restart-button:hover {
+    background-color: rgba(16, 63, 131, 0.93);
+    color: white;
 }
