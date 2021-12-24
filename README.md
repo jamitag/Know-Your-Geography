@@ -62,11 +62,34 @@ User is notified of their overall score at end of game informing the user if the
 
 __HTML__
 
+The index.html page was tested using the [W3C HTML validation service](https://validator.w3.org/nu/) and no errors where discovered.
+
 __CSS__
+
+The style.css file was tested using the [W3C CSS validation service](https://jigsaw.w3.org/css-validator/) and no errors where discovered.
 
 __JavaScript__
 
+The script.js file was tested using [JSHint](https://jshint.com/) and no errors where found. There where 6 unused variables identified due to no reference within the JS file itself however these are utilized within the HTML file to provide functionality.
+
+## Feature Testing
+
+Various functions and features where tested across browsers and devices. These include;
+
+- LinkLink to hompage working.
+- Buttons prompt expected response.
+- Correct answers are in fact correct.
+- Hover function works when hovered over buttons.
+- Score counter functions as expected when answering questions.
+- Relevant result page displays depending on result.
+
 ### Responsiveness
+
+The quiz is designed to be responsive across multiple devices of varying screen sizes inlcuding;
+
+- MacBook - 1280 x 1200
+- iPad	- 768 x 1024
+- iPhone 6/7/8 - 375 x 667
 
 ### Bugs
 
@@ -82,8 +105,14 @@ The clickable buttons on the homepage appear to have some styling around the top
 - <b>Solution</b>
 This issue remains however, has no impact on the flow of the game or user experience.
 
+- <b>Issue</b>
+When an acnhor tag was added to the header, there was a purple underline beneath the text that wouldn't disapear using 'text-decoration: none'.
+
+- <b>Solution</b>
+I used a solution found [here](https://stackoverflow.com/questions/2789703/remove-blue-underline-from-link) which applied a styling to all anchor tags. There is only one anchor tag in this file therefore this solution worked fine however may not be useful for a more complex page with multiple links and styling options.
+
 ## Deployment
-The game was deployed with GitHub using the below steps:
+The quiz was deployed with GitHub using the below steps:
 
 - Within the relavant repository, select 'Settings'.
 - Navigate to the 'Pages' section displayed on the left menu.
@@ -96,6 +125,11 @@ Know Your... Geography can be viewed [here]("https://jamitag.github.io/Know-Your
 ### Content
 
 - I used this [method]("https://stackoverflow.com/questions/3715047/how-to-reload-a-page-using-javascript") to refresh the page at the end of the quiz.
+
+- The formatting of the questionArray was taken [Here](https://www.sitepoint.com/simple-javascript-quiz/).
+
+- This [solution](https://stackoverflow.com/questions/2789703/remove-blue-underline-from-link) was used to overcome a styling issue on the header.
+
 
 ### Media
 

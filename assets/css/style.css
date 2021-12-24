@@ -7,6 +7,7 @@ body {
     color: whitesmoke;
     background-image: url(../images/earth-background.png);
     background-position: -200px 20px;
+    overflow-x: hidden;
 }
 
 /* Homepage*/
@@ -17,6 +18,20 @@ body {
     height: 600px;
     margin: auto;
     margin-top: 100px;
+}
+
+.header {
+    color: whitesmoke;
+    border: none;
+}
+
+a {
+    text-decoration:none;
+ }
+
+.header a {
+    text-decoration: none !important;
+    border-bottom-style: none;
 }
 
 /* Main game area*/
