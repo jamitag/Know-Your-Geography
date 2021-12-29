@@ -95,7 +95,7 @@ function showInstructions() {
 }
 
 /*
-this function will allow clicking 
+This function will allow clicking 
 of the play button to take the user 
 to the first question
 */
@@ -106,7 +106,7 @@ function startQuiz() {
 }
 
 /*
-renders each question within the 
+Renders each question within the 
 questionArray and displays corresponding 
 answer options
 */
@@ -123,9 +123,9 @@ function nextQuestion() {
 }
 
 /*
-clicking an answer button calls this function. 
+Clicking an answer button calls this function. 
 It allows user to select one of the four answer 
-options and remain active
+options and remain highlighted
 */
 function renderOrchangeAnswer(inputButton, input){
     answer = input;
@@ -140,8 +140,8 @@ function renderOrchangeAnswer(inputButton, input){
 }
 
 /*
-Adds correct answer to score counter and identifies last 
-question and finishes quiz
+Adds correct answer to score counter and identifies final 
+question in order to call the finishes quiz function
 */
 function answerQuestion() {
     if (answer === questionsArray[questionIndex].correctAnswer){
@@ -158,7 +158,7 @@ function answerQuestion() {
 
 /*
 Displays 'congratulations' or 'try again' page depending on score
-as well as showing the users score
+as well as showing the users final score on the relevant result page
 */
 function finishQuiz() {
     for (var i = 0; i < RESULTS_SCORE.length; i++) {
