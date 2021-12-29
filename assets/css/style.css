@@ -45,7 +45,7 @@ a {
 }
 
 #question {
-    height: 250px;
+    height: 200px;
     width: 100%;
     font-size: 150%;
 }
@@ -139,4 +139,26 @@ a {
 .restart-button:hover {
     background-color: rgba(16, 63, 131, 0.93);
     color: white;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 500px) {
+
+    .buttons {
+        display: block;
+        margin: auto;
+    }
+
+    #answers {
+        margin-bottom: 80px;
+        align-items: center;
+    }
+
+    #question {
+        height: 100px;
+    }
+
+
 }
