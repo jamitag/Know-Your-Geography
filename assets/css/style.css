@@ -162,3 +162,15 @@ a {
 
 
 }
+
+@media screen and (max-width: 420px) {
+
+    #primary-box {
+        width: 300px;
+    }
+
+    #next-button {
+        width: 280px;
+    }
+
+}
