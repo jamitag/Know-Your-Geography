@@ -160,6 +160,9 @@ a {
         height: 120px;
     }
 
+    #play-button {
+        border-radius: 5%;
+    }
 
 }
 

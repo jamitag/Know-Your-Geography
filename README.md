@@ -111,6 +111,12 @@ When I applied an anchor tag to the header, there was a purple line beneath the 
 - <b>Solution</b>
 I used a solution from a comment found [here](https://stackoverflow.com/questions/2789703/remove-blue-underline-from-link) which applied the 'text-decoration' styling to all anchor tags. There is only one anchor tag in this file therefore this solution worked fine however may not be useful for a more complex page with multiple links and styling options.
 
+- <b>Issue</b>
+I tested the site for reponsivness on iamresponsive.com which showed the site working and looking as expected across varying device sizes however, when opened on an actual device (mobile) the play button on the homepage appeared oval shape.
+
+- <b>Solution</b>
+Using media queries, take off the border radius for mobile screens
+
 ## Deployment
 The quiz was deployed with GitHub using the below steps:
 
