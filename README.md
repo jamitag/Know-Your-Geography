@@ -11,22 +11,46 @@ Users of the website will be able to smoothly and easily navigate through the ga
 ### Existing Features
 
 - __Heading__
-A simple header with the game title appears at the top of the page and remains throughout.
+
+A simple header with the game title appears at the top of the page and remains throughout. This also contains an anchor tag which will return the user to the homepage at any point.
+
+<img src="assets/images/homepage.png">
 
 - __Background__
-A background image relating to the game subject sits visable throughout the game. 
+
+A background image relating to the game subject sits visable throughout the game. Image was sourced from [pexels.com](https://www.pexels.com/).
+
+<img src="assets/images/earth-background.png">
 
 - __Play Game__
+
 The game is viewed and played within a small card. To begin, the user is greeted with a play button which when pressed will begin the game.
 
+<img src="assets/images/homepage-play.png">
+
+- __How To Play__
+
+The user can click a button which informs them of the rules of the game.
+
+<img src="assets/images/instructions.png">
+
 - __Game__
+
 A question with four options will be presented to the user. They will select one answer only before clicking 'Next'.
 
+<img src="assets/images/gameplay.png">
+
 - __Score Counter__
+
 A running total of the users score sits beneath the game area allowing the user to sese if they got the question right.
 
+<img src="assets/images/score-counter.png">
+
 - __Result alert__
-User is notified of their overall score at end of game informing the user if they have passed or failed
+
+User is notified of their overall score at end of game informing the user if they have passed or failed.
+
+<img src="assets/images/result-page.png">
 
 ### Features to add
 
