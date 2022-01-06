@@ -68,6 +68,7 @@ const RESULT_BOX = document.getElementById("result-box");
 const CONGRATULATIONS = document.getElementById("congratulations");
 const TRY_AGAIN = document.getElementById("try-again");
 let instructions = document.getElementById("how-to-play");
+let instructionsButton = document.getElementById("how-to-play-button");
 let instructionsVisable = false;
 const RESULTS_SCORE = document.getElementsByClassName("result-score"); //currently represented within two seperate containers (Congratualtions / try-again)
 const RESTART_GAME = document.getElementsByClassName("restart-button");
@@ -84,6 +85,7 @@ SCORE_TEXT.textContent=score;
 function showInstructions() {
     PLAY_BUTTON.style.display= instructionsVisable ? "none": "";
     instructions.style.display = instructionsVisable ? "": "none";
+    instructionsButton.textContent = instructionsVisable ? "Return": "How to play";
     instructionsVisable = !instructionsVisable;
 }
 
