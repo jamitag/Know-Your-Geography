@@ -76,6 +76,10 @@ User is notified of their overall score at end of game informing the user if the
 - I want the functions of the game to run smoothly and glitch free.
 - I want users to enjoy playing and be encouraged to return or share the quiz.
 
+## Testing
+
+A seperate testing file can be found [here]()
+
 ## Technologies
 
 ### Editor
@@ -84,7 +88,7 @@ User is notified of their overall score at end of game informing the user if the
 ### Languages
 - HTML5
 - CSS3
-- JacaScript
+- JavaScript
 
 
 ### Version control
@@ -103,7 +107,7 @@ The quiz was deployed with GitHub using the below steps:
 - Navigate to the 'Pages' section displayed on the left menu.
 - Select the main branch from the drop-down menu and save to display the link to your website.
 
-Know Your... Geography can be viewed [here]("https://jamitag.github.io/Know-Your-Geography/")
+Know Your... Geography can be viewed [here]("https://jamitag.github.io/Know-Your-Geography/").
 
 ## Credits
 

@@ -51,7 +51,7 @@ let questionsArray = [
     }
 ];
 
-// global variables
+// Global variables
 
 let questionIndex = 0;
 let score = 0;
@@ -63,41 +63,34 @@ let answer = "";
 const BUTTONS = document.querySelectorAll('[id^="button-"]');
 const NEXT_BUTTON = document.getElementById("next-button");
 const SCORE_TEXT = document.getElementById("score");
-SCORE_TEXT.textContent=score;
 const TOTAL_TEXT = document.getElementById("total");
-TOTAL_TEXT.textContent = total;
 const RESULT_BOX = document.getElementById("result-box");
 const CONGRATULATIONS = document.getElementById("congratulations");
 const TRY_AGAIN = document.getElementById("try-again");
 let instructions = document.getElementById("how-to-play");
 let instructionsVisable = false;
-const RESULTS_SCORE = document.getElementsByClassName("result-score");
+const RESULTS_SCORE = document.getElementsByClassName("result-score"); //currently represented within two seperate containers (Congratualtions / try-again)
 const RESTART_GAME = document.getElementsByClassName("restart-button");
 
+TOTAL_TEXT.textContent = total;
+SCORE_TEXT.textContent=score;
 
 
-/*
-this function will display instructions
-on how to play the game when clicking 
-the 'How to play' button
+
+/**
+* This function will display instructions on how to play the game when clicking 
+* the 'How to play' button
 */
 function showInstructions() {
-    if(!instructionsVisable){
-        PLAY_BUTTON.style.display= "none";
-        instructions.style.display="";
-        instructionsVisable = true;
-    }
-    else {
-        PLAY_BUTTON.style.display= "";
-        instructions.style.display="none";
-        instructionsVisable = false;
-    }
+    PLAY_BUTTON.style.display= instructionsVisable ? "none": "";
+    instructions.style.display = instructionsVisable ? "": "none";
+    instructionsVisable = !instructionsVisable;
 }
 
-/*
-This function will allow clicking 
-of the play button to take the user 
-to the first question
+/**
+* This function will allow clicking 
+* of the play button to take the user 
+* to the first question
 */
 function startQuiz() {
     PRIMARY_BOX.style.display = "";
@@ -105,10 +98,9 @@ function startQuiz() {
     nextQuestion();
 }
 
-/*
-Renders each question within the 
-questionArray and displays corresponding 
-answer options
+/**
+* Renders each question within the questionArray and displays corresponding 
+* answer options
 */
 function nextQuestion() {
     //populates question
@@ -122,26 +114,24 @@ function nextQuestion() {
         NEXT_BUTTON.disabled = true;
 }
 
-/*
-Clicking an answer button calls this function. 
-It allows user to select one of the four answer 
-options and remain highlighted
+/**
+* Clicking an answer button calls this function. It allows user to select one of
+* the four answer options and remain highlighted
 */
 function renderOrchangeAnswer(inputButton, input){
     answer = input;
 
     for(var x=0; x < BUTTONS.length; x++){
-        if(BUTTONS[x].classList.contains("active")){
             BUTTONS[x].classList.remove("active");
-        }
     }
+
     NEXT_BUTTON.disabled = false;
     inputButton.classList.add("active");
 }
 
-/*
-Adds correct answer to score counter and identifies final 
-question in order to call the finishes quiz function
+/**
+* Adds correct answer to score counter and identifies final question in order to
+* call the finishes quiz function
 */
 function answerQuestion() {
     if (answer === questionsArray[questionIndex].correctAnswer){
@@ -156,9 +146,9 @@ function answerQuestion() {
     nextQuestion();
 }
 
-/*
-Displays 'congratulations' or 'try again' page depending on score
-as well as showing the users final score on the relevant result page
+/**
+* Displays 'congratulations' or 'try again' page depending on score jjjjjjjjjjj||
+* as well as showing the users final score on the relevant result page
 */
 function finishQuiz() {
     for (var i = 0; i < RESULTS_SCORE.length; i++) {
@@ -175,7 +165,9 @@ function finishQuiz() {
     }
 }
 
-// Button which restarts quiz at end of game
+/**
+* Button which restarts quiz at end of game
+*/
 function restartQuiz() {
     window.location.reload();
 }
