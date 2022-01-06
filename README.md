@@ -17,7 +17,7 @@ A simple header with the game title appears at the top of the page and remains t
 A background image relating to the game subject sits visable throughout the game. 
 
 - __Play Game__
-The user is greeted with a play button which when pressed witll begin the game.
+The game is viewed and played within a small card. To begin, the user is greeted with a play button which when pressed will begin the game.
 
 - __Game__
 A question with four options will be presented to the user. They will select one answer only before clicking 'Next'.
@@ -85,7 +85,7 @@ Various functions and features where tested across browsers and devices. These i
 
 ### Responsiveness
 
-The quiz is designed to be responsive across multiple devices of varying screen sizes inlcuding;
+The quiz is designed to be responsive across multiple devices of varying screen sizes and was tested on;
 
 - MacBook - 1280 x 1200
 - iPad	- 768 x 1024
@@ -100,16 +100,16 @@ The nextQuestion function would not iterate through the questionArray to display
 Many attempts where made to change the relavant statement to no avail. After some time, it was discovered that the syntax within the array itself was faulty and was promptly fixed. The style of the array was derived from the 'Display Quiz Questions' section of this [Link](https://www.sitepoint.com/simple-javascript-quiz/).
 
 - <b>Issue</b>
-The clickable buttons on the homepage appear to have some styling around the top edges which cannot be removed at this time.
+The clickable buttons on the homepage appear to have some styling around the top edges which cannot be removed using 'text-decoration: none;'.
 
 - <b>Solution</b>
 This issue remains however, has no impact on the flow of the game or user experience.
 
 - <b>Issue</b>
-When an acnhor tag was added to the header, there was a purple underline beneath the text that wouldn't disapear using 'text-decoration: none'.
+When I applied an anchor tag to the header, there was a purple line beneath the text that wouldn't disappear using 'text-decoration: none'.
 
 - <b>Solution</b>
-I used a solution found [here](https://stackoverflow.com/questions/2789703/remove-blue-underline-from-link) which applied a styling to all anchor tags. There is only one anchor tag in this file therefore this solution worked fine however may not be useful for a more complex page with multiple links and styling options.
+I used a solution from a comment found [here](https://stackoverflow.com/questions/2789703/remove-blue-underline-from-link) which applied the 'text-decoration' styling to all anchor tags. There is only one anchor tag in this file therefore this solution worked fine however may not be useful for a more complex page with multiple links and styling options.
 
 ## Deployment
 The quiz was deployed with GitHub using the below steps:
@@ -129,6 +129,8 @@ Know Your... Geography can be viewed [here]("https://jamitag.github.io/Know-Your
 - The formatting of the questionArray was taken [Here](https://www.sitepoint.com/simple-javascript-quiz/).
 
 - This [solution](https://stackoverflow.com/questions/2789703/remove-blue-underline-from-link) was used to overcome a styling issue on the header.
+
+- Inspiration for the the layout and required functionality for the quiz was taken from this [tutorial](https://www.youtube.com/watch?v=riDzcEQbX6k).
 
 
 ### Media
