@@ -157,12 +157,12 @@ a {
     }
 
     #question {
-        height: 120px;
+        height: 130px;
     }
 
     #play-button {
-        border-radius: 5%;
-        font-size: 400%;
+        border-radius: 50%;
+        font-size: 200%;
     }
 
 }

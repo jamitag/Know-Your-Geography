@@ -4,7 +4,7 @@
 This interactive game is designed for quiz lovers and geography enthusiasts alike. The questions are at beginner level and targets children of high school age - although adults are more than welcome to test themselves!
 Users of the website will be able to smoothly and easily navigate through the game, with an active score counter informing them of their progress.
 
- <amiresponsive img>
+ <img src="assets/images/amiresponsive.png">
 
 ## Features
 
