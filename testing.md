@@ -61,4 +61,4 @@ I used a solution from a comment found [here](https://stackoverflow.com/question
 I tested the site for reponsivness on iamresponsive.com which showed the site working and looking as expected across varying device sizes however, when opened on an actual device (mobile) the play button on the homepage appeared oval shape.
 
 - <b>Solution</b>
-Using media queries, take off the border radius for mobile screens
+My mentor suggested adding some padding to the icon which fixed the issue.

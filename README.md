@@ -18,7 +18,7 @@ A simple header with the game title appears at the top of the page and remains t
 
 - __Background__
 
-A background image relating to the game subject sits visable throughout the game. Image was sourced from [pexels.com](https://www.pexels.com/).
+A background image relating to the game subject sits visible throughout the game. Image was sourced from [pexels.com](https://www.pexels.com/).
 
 <img src="assets/images/earth-background.png">
 
@@ -78,7 +78,7 @@ User is notified of their overall score at end of game informing the user if the
 
 ## Testing
 
-A seperate testing file can be found [here]()
+A seperate testing file can be found [here](https://github.com/jamitag/Know-Your-Geography/blob/main/testing.md)
 
 ## Technologies
 
